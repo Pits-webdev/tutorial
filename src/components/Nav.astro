@@ -1,0 +1,21 @@
+---
+import { NavLinks } from "../constants/index";
+import Logo from "./ui/Logo.astro";
+---
+
+<header class="w-full h-20">
+  <nav class="container mx-auto h-full flex items-center justify-between">
+    <Logo />
+    <ul class="flex gap-x-16">
+      {
+        NavLinks.map((item) => (
+          <li>
+            <a href={item.path}>{item.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <a class="btn" href="/kontakt">Kontakt</a>
+  </nav>
+</header>

@@ -1,0 +1,81 @@
+---
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+}
+/* const { title } = Astro.props; */
+
+const pageTitle = "Pit | Dev";
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body
+    class="bg-col_black text-col_white flex flex-col min-h-screen justify-between"
+  >
+    <!-- Header -->
+    <Nav />
+    <slot />
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Orbitron";
+    src: url("/fonts/Orbitron-Regular.ttf");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter-Regular.ttf");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  h1 {
+    @apply text-[1.5rem] md:text-[2rem] xl:text-[3.5rem] leading-[120%];
+  }
+
+  h2 {
+    @apply text-[1.75rem] lg:text-[3rem] leading-[120%];
+  }
+
+  h3 {
+    @apply text-[2.5rem] leading-[120%];
+  }
+
+  h4 {
+    @apply md:text-[1.25rem] xl:text-[2rem] leading-[120%];
+  }
+
+  h5 {
+    @apply md:text-[1.25rem] lg:text-[1.5rem] leading-[120%];
+  }
+
+  h6 {
+    @apply text-[1.25rem] leading-[120%];
+  }
+
+  p {
+    @apply xl:text-[1.125rem] leading-[160%];
+  }
+
+  .btn {
+    @apply px-8 py-2 bg-col_accent text-col_white rounded-xl ring-1 hover:bg-col_white hover:text-col_black;
+  }
+</style>
