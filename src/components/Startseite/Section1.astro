@@ -1,7 +1,36 @@
 ---
-
+import Link from "../../components/ui/Link.astro";
 ---
 
-<div>
-  <h1 class="text-col_accent">Startseite</h1>
-</div>
+<section class="w-full h-full">
+  <div class="container mx-auto flex justify-between">
+    <div class="basis-1/2 flex flex-col gap-y-4">
+      <h1 class="mb-6">Lorem ipsum dolor sit.</h1>
+      <p class="max-w-[480px]">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempora
+        vel, amet ducimus non facere ipsa.
+      </p>
+      <p class="max-w-[480px]">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ullam
+        debitis beatae asperiores.
+      </p>
+
+      <div class="mt-12 flex items-center gap-x-8">
+        <Link
+          title="Mehr erfahren"
+          path="/leistungen"
+          style="px-8 py-2 text-col_white bg-col_accent ring-1 ring-black/30 rounded-2xl hover:bg-col_white hover:text-col_black"
+        />
+
+        <Link
+          title="Kontakt"
+          path="/kontakt"
+          style="px-8 py-2 text-col_black bg-col_white ring-1 ring-black/30 rounded-2xl hover:bg-col_black hover:text-col_white"
+        />
+      </div>
+    </div>
+    <div class="basis-1/2">
+      <img src="/images/Image.webp" alt="garden" />
+    </div>
+  </div>
+</section>

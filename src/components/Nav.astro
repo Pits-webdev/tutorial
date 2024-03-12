@@ -1,6 +1,10 @@
 ---
 import { NavLinks } from "../constants/index";
 import Logo from "./ui/Logo.astro";
+import Link from "./ui/Link.astro";
+
+const pathname = new URL(Astro.request.url).pathname;
+console.log(pathname);
 ---
 
 <header class="w-full h-20">
@@ -8,14 +12,26 @@ import Logo from "./ui/Logo.astro";
     <Logo />
     <ul class="flex gap-x-16">
       {
-        NavLinks.map((item) => (
-          <li>
-            <a href={item.path}>{item.title}</a>
+        NavLinks.map(({ path, title }) => (
+          <li class="relative group">
+            <a href={path}>{title}</a>
+            {pathname === path ? (
+              <span class="inline-block w-full h-[1px] bg-col_white absolute left-0 -bottom-1" />
+            ) : (
+              <span
+                class="inline-block w-0 h-[1px] bg-col_white absolute left-0 -bottom-1
+               group-hover:w-full transition-[width] duration-300 ease-in-out"
+              />
+            )}
           </li>
         ))
       }
     </ul>
 
-    <a class="btn" href="/kontakt">Kontakt</a>
+    <Link
+      title="Kontakt"
+      path="/kontakt"
+      style="px-8 py-2 text-col_white bg-col_accent ring-1 ring-black/30 rounded-2xl hover:bg-col_white hover:text-col_black"
+    />
   </nav>
 </header>
