@@ -2,9 +2,9 @@
 import Link from "../../components/ui/Link.astro";
 ---
 
-<section class="w-full h-full">
-  <div class="container mx-auto flex justify-between">
-    <div class="basis-1/2 flex flex-col gap-y-4">
+<section class="w-full h-[calc(100vh-80px)] flex flex-col justify-center">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="basis-1/2 flex flex-col gap-y-4 -mt-32">
       <h1 class="mb-6">Lorem ipsum dolor sit.</h1>
       <p class="max-w-[480px]">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempora
@@ -19,18 +19,23 @@ import Link from "../../components/ui/Link.astro";
         <Link
           title="Mehr erfahren"
           path="/leistungen"
-          style="px-8 py-2 text-col_white bg-col_accent ring-1 ring-black/30 rounded-2xl hover:bg-col_white hover:text-col_black"
+          style="px-8 py-2 text-primary bg-accent ring-1 ring-black/30 rounded-2xl hover:bg-secondary "
         />
 
         <Link
           title="Kontakt"
           path="/kontakt"
-          style="px-8 py-2 text-col_black bg-col_white ring-1 ring-black/30 rounded-2xl hover:bg-col_black hover:text-col_white"
+          style="px-8 py-2 text-secondary bg-primary  ring-1 ring-black/30 rounded-2xl hover:bg-secondary hover:text-primary"
         />
       </div>
     </div>
     <div class="basis-1/2">
-      <img src="/images/Image.webp" alt="garden" />
+      <img
+        class="w-full h-[800px] object-cover"
+        src="/images/Image.webp"
+        alt="garden"
+      />
     </div>
   </div>
 </section>
+<style></style>

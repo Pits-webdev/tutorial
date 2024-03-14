@@ -1,0 +1,256 @@
+---
+import Link from "./ui/Link.astro";
+import Logo from "./ui/Logo.astro";
+---
+
+<div
+  id="cookieContainer"
+  class="w-full h-screen fixed top-0 left-0 z-[100] hidden"
+>
+  <div class="w-full h-full flex justify-center items-center bg-black/80">
+    <div class="max-w-[768px] overflow-y-scroll h-[660px] bg-white p-4 text-sm">
+      <div class="flex flex-col gap-y-1">
+        <div class="mb-4 flex flex-col items-center justify-center gap-x-4">
+          <Logo />
+          <h4>Datenschutzeinstellungen</h4>
+        </div>
+
+        <div class="flex flex-col gap-y-3">
+          <p>
+            Wenn Sie unter 16 Jahre alt sind und Ihre Zustimmung zu freiwilligen
+            Diensten geben möchten, müssen Sie Ihre Erziehungsberechtigten um
+            Erlaubnis bitten.
+          </p>
+
+          <p>
+            Wir verwenden Cookies und andere Technologien auf unserer Website.
+            Einige von ihnen sind essenziell, während andere uns helfen, diese
+            Website und Ihre Erfahrung zu verbessern. Personenbezogene Daten
+            können verarbeitet werden (z. B. IP-Adressen), z. B. für
+            personalisierte Anzeigen und Inhalte oder Anzeigen- und
+            Inhaltsmessung. Weitere Informationen über die Verwendung Ihrer
+            Daten finden Sie in unserer{" "}
+
+            <Link
+              title="Datenschutzerklärung ."
+              path="/datenschutz"
+              style="underline underline-offset-[6px] decoration-accent hover:text-accent"
+            />
+          </p>
+
+          <p>
+            Hier finden Sie eine Übersicht über alle verwendeten Cookies. Sie
+            können Ihre Einwilligung zu ganzen Kategorien geben oder sich
+            weitere Informationen anzeigen lassen und so nur bestimmte Cookies
+            auswählen.
+          </p>
+        </div>
+
+        <fieldset
+          class="mt-4 mb-4 flex flex-col sm:items-center gap-x-8 gap-y-4 sm:flex-row"
+        >
+          <button
+            id="allAccept"
+            class="px-8 py-2 text-primary ring-1 ring-black/30 rounded-2xl bg-accent inline-block hover:bg-black/70"
+          >
+            Alles akzeptieren
+          </button>
+          <button
+            id="oneAccept"
+            class="px-8 py-2 text-secondary ring-1 ring-black/30 rounded-2xl bg-primary inline-block
+         hover:bg-black/70 hover:text-primary"
+          >
+            Speichern
+          </button>
+        </fieldset>
+
+        <div class="flex flex-col gap-y-1">
+          {/* esseniiell Cookie */}
+          <div class="essenziel cookie">
+            <div>
+              <h4>Essenziell (1)</h4>
+              <p class="mt-2">
+                Essenzielle Cookies ermöglichen grundlegende Funktionen und sind
+                für die einwandfreie Funktion der Website erforderlich.
+              </p>
+
+              <div class="head my-4 text-center">
+                <button
+                  id="accBtnOne"
+                  class="text-accent underline"
+                  type="button"
+                >
+                  Cookie-Informationen anzeigen
+                </button>
+              </div>
+
+              <div
+                id="accContentOne"
+                class="overflow-y-clip w-full flex flex-col gap-y-1 mb-4 h-0"
+              >
+                <div class="flex gap-x-2">
+                  <p class="basis-1/4">Name</p>
+                  <p class="basis-3/4">Dark Mode</p>
+                </div>
+
+                <div class="flex gap-x-2">
+                  <p class="basis-1/4">Anbieter</p>
+                  <p class="basis-3/4">
+                    Eigentümer dieser Website, {/*  */}
+                    <Link class="underline decoration-accent" href="/impressum">
+                      Impressum
+                    </Link>
+                  </p>
+                </div>
+
+                <div class="flex gap-x-2">
+                  <p class="basis-1/4">Zweck</p>
+                  <p class="basis-3/4">
+                    Speichert die Einstellungen der Besucher, Light und Dark
+                    Mode
+                  </p>
+                </div>
+
+                <div class="flex gap-x-2">
+                  <p class="basis-1/4">Cookie Name</p>
+                  <p class="basis-3/4">theme-coockie</p>
+                </div>
+
+                <div class="flex gap-x-2">
+                  <p class="basis-1/4">Cookie Laufzeit</p>
+                  <p class="basis-3/4">1 Jahr</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* extern Cookie */}
+          <div class="externe cookie">
+            <div>
+              <div class="flex items-center justify-between">
+                <h4>Externe Medien (1)</h4>
+
+                <label
+                  class="checkbox_label flex items-center gap-x-4"
+                  for="cookie"
+                >
+                  <span class="font-bold text-base">Aus</span>
+                  <span class="hidden font-bold text-base">An</span>
+                  <input class="w-5 h-5" type="checkbox" name="cookie" id="" />
+                </label>
+              </div>
+              <p class="mt-2">
+                Inhalte von Videoplattformen und Social-Media-Plattformen werden
+                standardmäßig blockiert. Wenn Cookies von externen Medien
+                akzeptiert werden, bedarf der Zugriff auf diese Inhalte keiner
+                manuellen Einwilligung mehr.
+              </p>
+
+              <div class="head my-4 text-center">
+                <button
+                  id="accBtnTwo"
+                  class="text-accent underline"
+                  type="button"
+                >
+                  Cookie-Informationen anzeigen
+                </button>
+              </div>
+
+              <div
+                id="accContentTwo"
+                class="overflow-y-clip w-full flex flex-col gap-y-1 mb-4 h-0"
+              >
+                <div class="flex gap-x-2">
+                  <p class="basis-1/4">Name</p>
+                  <p class="basis-3/4">Google Map</p>
+                </div>
+
+                <div class="flex gap-x-2">
+                  <p class="basis-1/4">Anbieter</p>
+                  <p class="basis-3/4">
+                    Google {/*  */}
+                    <Link class="underline decoration-accent" href="/impressum">
+                      Google.Map
+                    </Link>
+                  </p>
+                </div>
+
+                <div class="flex gap-x-2">
+                  <p class="basis-1/4">Zweck</p>
+                  <p class="basis-3/4">
+                    Speichert die Einstellungen der Besucher, Light und Dark
+                    Mode
+                  </p>
+                </div>
+
+                <div class="flex gap-x-2">
+                  <p class="basis-1/4">Cookie Name</p>
+                  <p class="basis-3/4">theme-coockie</p>
+                </div>
+
+                <div class="flex gap-x-2">
+                  <p class="basis-1/4">Cookie Laufzeit</p>
+                  <p class="basis-3/4">6 Monate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const cookieContainer = document.querySelector("#cookieContainer");
+  const oneAccept = document.querySelector("#oneAccept");
+  const allAccept = document.querySelector("#allAccept");
+  const accBtnOne = document.querySelector("#accBtnOne");
+  const accBtnTwo = document.querySelector("#accBtnTwo");
+  const accContentOne = document.querySelector("#accContentOne");
+  const accContentTwo = document.querySelector("#accContentTwo");
+
+  /* events */
+  window.addEventListener("load", cookieBanner);
+  accBtnOne.addEventListener("click", handleAccOne);
+  accBtnTwo.addEventListener("click", handleAccTwo);
+
+  /* funkitions */
+
+  /* logik cookiebanner onload */
+  function cookieBanner() {
+    if (document.cookie.includes("oneAccept")) return;
+
+    cookieContainer.classList.replace("hidden", "block");
+
+    /* speichern  Essenziell Cookie*/
+    oneAccept.addEventListener("click", () => {
+      cookieContainer.classList.replace("block", "hidden");
+      const oneYear = 365 * 24 * 60 * 60 * 1000;
+      document.cookie = `cookie-banner=oneAccept;max-age=${oneYear};secure=true;sameSite=lax;`;
+
+      console.log("hi");
+    });
+  }
+
+  /* speichern Extern Cookie*/
+  allAccept.addEventListener("click", () => {
+    //TODO - write logik extern cookie
+    console.log("manage extern Cookie");
+  });
+
+  /* accordion */
+  function handleAccOne() {
+    if (accContentOne.classList.contains("h-0")) {
+      accContentOne.classList.toggle("h-full");
+      return;
+    }
+    accContentOne.classList.toggle("h-0");
+  }
+  function handleAccTwo() {
+    if (accContentTwo.classList.contains("h-0")) {
+      accContentTwo.classList.toggle("h-full");
+      return;
+    }
+    accContentOne.classList.toggle("h-0");
+  }
+</script>

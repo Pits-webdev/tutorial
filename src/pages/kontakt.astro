@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="kontakt">
+  <div class="container mx-auto mt-8 mb-4">
+    <h3 class="text-center font-bold">Kontakt</h3>
+    <p class="text-center mt-2 mb-8">Holen sie Ihr Angebot ein</p>
+
+    <form class="flex flex-col items-center gap-5" action="">
+      <div class="grid w-full max-w-md items-center gap-2">
+        <label for="Name">Name:</label>
+        <input
+          class="ring-1 ring-black/20 px-4 py-3 rounded-lg bg-primary"
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+        />
+      </div>
+
+      <div class="grid w-full max-w-md items-center gap-2">
+        <label for="email">Email:</label>
+        <input
+          class="ring-1 ring-black/20 px-4 py-3 rounded-lg bg-primary"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+
+      <div class="grid w-full max-w-md items-center gap-2">
+        <label for="nachricht">Nachricht:</label>
+        <textarea
+          class="ring-1 ring-black/20 px-4 py-3 rounded-lg bg-primary"
+          name="nachricht"
+          cols="30"
+          rows="2"
+          placeholder="Nachricht"
+          required></textarea>
+      </div>
+
+      <div class="grid w-full max-w-md items-center gap-2">
+        <p>*Pflichtfelder</p>
+
+        <p>
+          <span class="mr-2">
+            <input class="w-4 h-4" type="checkbox" required />
+          </span>
+          Hiermit stimme ich dem Datenschutz und der Verarbeitung meiner personenbezogenen-Daten
+          zu.
+        </p>
+      </div>
+
+      <div class="grid w-full max-w-md items-center mt-4">
+        <button
+          class="px-8 py-2 text-primary ring-1 ring-black/30 rounded-2xl bg-accent inline-block hover:bg-black/70"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</Layout>

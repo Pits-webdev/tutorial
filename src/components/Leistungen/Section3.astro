@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon/components";
+import LeistungCard from "../ui/LeistungCard.astro";
+---
+
+<section class="w-full h-full mt-28">
+  <LeistungCard style="flex order-0" />
+  <LeistungCard style="flex order-1" />
+  <LeistungCard style="flex order-0" />
+  <div
+    class="bg-accent text-primary flex justify-between items-center px-20 h-[160px]"
+  >
+    <h4>Verbinden Sie sich mit uns</h4>
+    <div class="flex items-center gap-x-8">
+      <p class="flex items-center gap-x-3">
+        <Icon name="phone" width={16} /><span>123456789</span>
+      </p>
+      <p class="flex items-center gap-x-3 mt-1">
+        <Icon name="mail" width={16} /><span>hallo@example</span>
+      </p>
+    </div>
+  </div>
+</section>

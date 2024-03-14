@@ -1,0 +1,57 @@
+---
+import { Icon } from "astro-icon/components";
+const { style } = Astro.props;
+---
+
+<div class="flex">
+  <div class=`basis-1/2 ${style}`>
+    <img
+      class="w-full h-[920px] object-cover"
+      src="/images/Image.webp"
+      alt="image"
+    />
+  </div>
+  <div class="basis-1/2 p-16">
+    <h4 class="mb-4">Garden</h4>
+    <h2>Strategische Vision: Führen Sie Ihren geschäftlichen Erfolg</h2>
+
+    <div class="mt-8 flex flex-col gap-y-2">
+      <p>
+        Unsere strategische Beratung befähigt Unternehmen, Komplexitäten zu
+        bewältigen, Herausforderungen zu antizipieren und Chancen für
+        dauerhaften Erfolg zu nutzen. Von der Marktanalyse bis zur Zielsetzung
+        erstellen wir eine Roadmap, die auf Ihre Vision abgestimmt ist und
+        sicherstellt, dass jeder Schritt zielgerichtet und wirkungsvoll ist.
+      </p>
+      <p>
+        Unser strategischer Ansatz geht über herkömmliche Methoden hinaus und
+        setzt auf Innovation und Anpassungsfähigkeit, damit Ihr Unternehmen
+        immer einen Schritt voraus ist. Mit dem Fokus auf langfristiges Wachstum
+        ist unser Strategieservice Ihr Kompass in der sich ständig
+        weiterentwickelnden Geschäftslandschaft.
+      </p>
+    </div>
+
+    <div class="mt-20">
+      <p>STRATEGIE-DIENSTLEISTUNGEN</p>
+      <ul class="mt-8 flex flex-col gap-y-4">
+        <li class="flex items-center space-x-3">
+          <Icon name="check" width={16} /><span
+            >Market Analysis and Insights</span
+          >
+        </li>
+        <li class="flex items-center space-x-4">
+          <Icon name="check" width={16} /><span
+            >Goal Setting and Roadmapping</span
+          >
+        </li>
+        <li class="flex items-center space-x-4">
+          <Icon name="check" width={16} /><span>Innovation Integration</span>
+        </li>
+        <li class="flex items-center space-x-4">
+          <Icon name="check" width={16} /><span>Innovation Integration</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -4,9 +4,10 @@ export default {
 	theme: {
 		extend: {
 			colors:{
-				col_white: "#f8f8f8",
-				col_black: "#222222",
-				col_accent: "#7fa32b",
+				primary: "#f8f8f8",
+				secondary: "#222222",
+				accent: "#ff0000",
+				divider:"#8c8c8c",
 			},
 			fontFamily: {
 				Orbitron: ["Orbitron, sans-serif"],
