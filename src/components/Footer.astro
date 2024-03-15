@@ -1,12 +1,50 @@
 ---
 import { Icon } from "astro-icon/components";
+import Logo from "./ui/Logo.astro";
 import Line from "./ui/Line.astro";
 ---
 
-<footer class="relative">
-  <Line style="w-full h-[1px] bg-secondary/30 inline-block absolute top-0" />
-  <div class="container mx-auto flex justify-between items-center py-8">
-    <Icon name="cookie" height={60} width={60} />
-    <p class="text-center">Copy right 2024</p>
+<footer class="relative w-full h-full mt-8">
+  <Line
+    style="w-full h-[1px] bg-secondary/30 inline-block absolute left-0 top-0"
+  />
+  <div class="container mx-auto py-8">
+    <div
+      class="flex flex-col text-center gap-y-4 gap-x-32 flex-wrap sm:flex-row sm:justify-between sm:text-start"
+    >
+      <a href="/"><Logo /></a>
+
+      <div>
+        <h4 class="font-semibold mb-2">Anschrift</h4>
+        <p>brand name</p>
+        <p>brand Street</p>
+        <p>country</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Kontakt</h4>
+        <p>brand Tel</p>
+        <p>brand Email</p>
+      </div>
+      <div class="">
+        <h4 class="font-semibold mb-2">Rechtliches</h4>
+        <div class="flex flex-col">
+          <a href="/impressum">Impressum</a>
+          <a href="/datenschutz">Datenschutzerklärung</a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col justify-between items-center sm:flex-row sm:items-start"
+    >
+      <button id="cookie_btn">
+        <Icon name="cookie" height={40} width={40} />
+      </button>
+      <p class="text-center text-sm mt-8 md:mt-4">brand name copy right 2024</p>
+    </div>
   </div>
 </footer>
+
+<script>
+  //TODO - show cookie-banner
+</script>
