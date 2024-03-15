@@ -82,4 +82,15 @@ const { title = "Pit | Dev", description = "Astro Tutorial Pit | Dev" } =
     height: 100%;
     display: block;
   }
+
+  /* Swiper style */
+  .swiper-wrapper {
+    @apply !h-[520px];
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    @apply bg-accent;
+  }
 </style>

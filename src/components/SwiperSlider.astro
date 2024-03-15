@@ -1,0 +1,89 @@
+<section class="w-full h-full">
+  <div class="container mx-auto">
+    <h2 class="text-center mb-16">Referenzen</h2>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            class="w-full h-[460px] object-cover"
+            src="/images/Image.webp"
+            alt="pic"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="w-full h-[460px] object-cover"
+            src="/images/Image.webp"
+            alt="pic"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="w-full h-[460px] object-cover"
+            src="/images/Image.webp"
+            alt="pic"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="w-full h-[460px] object-cover"
+            src="/images/Image.webp"
+            alt="pic"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="w-full h-[460px] object-cover"
+            src="/images/Image.webp"
+            alt="pic"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="w-full h-[460px] object-cover"
+            src="/images/Image.webp"
+            alt="pic"
+          />
+        </div>
+      </div>
+
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper/bundle";
+  import { Navigation, Pagination } from "swiper/modules";
+  // import Swiper styles
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    slidesPerView: 2,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 3000,
+    },
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    // Navigation arrows
+    /* navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }, */
+
+    // And if we need scrollbar
+  });
+</script>
